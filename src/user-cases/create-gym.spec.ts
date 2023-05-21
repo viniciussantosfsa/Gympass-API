@@ -1,14 +1,14 @@
 /* eslint-disable prettier/prettier */
 import { it, describe, expect, beforeEach } from 'vitest'
 import { CreateGymUseCase } from './create-gym'
-import { InMemoryGymRepository } from '@/repositories/in-memory/in-memory-gym-repo'
+import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-repo'
 
-let gymsRepository: InMemoryGymRepository
+let gymsRepository: InMemoryGymsRepository
 let sut: CreateGymUseCase
 
 describe('Register Use case', () => {
   beforeEach(() => {
-    gymsRepository = new InMemoryGymRepository()
+    gymsRepository = new InMemoryGymsRepository()
     sut = new CreateGymUseCase(gymsRepository)
   })
 
