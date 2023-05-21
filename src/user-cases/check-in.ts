@@ -3,7 +3,7 @@ import { CheckIn } from '@prisma/client'
 import { CheckInsRepository } from '@/repositories/check-ins-repo'
 import { GymsRepository } from '@/repositories/gyms-repo'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
-import { getDistanceBetweenCoordinates } from '@/utils/get-distance-between-coordinates'
+import { getDistanceBetweenCoordinates } from '../utils/get-distance-between-coordinates'
 
 interface CheckInUseCaseRequest {
   userId: string

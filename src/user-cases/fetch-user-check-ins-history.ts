@@ -3,8 +3,8 @@ import { CheckIn } from '@prisma/client'
 import { CheckInsRepository } from '@/repositories/check-ins-repo'
 
 interface FetchUserCheckInsHistoryUseCaseRequest {
-  userId: string
-  page: number
+  userId: string,
+  page: number,
 }
 
 interface FetchUserCheckInsHistoryUseCaseResponse {
