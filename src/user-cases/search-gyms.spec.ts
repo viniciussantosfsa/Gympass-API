@@ -29,14 +29,13 @@ describe('Search Gyms Use Case', () => {
         longitude: -32.934772,
     })
 
-    //     all gyms
-    const { gym } = await sut.execute({
+    const { gyms } = await sut.execute({
         query: 'JavaScript',
         page: 1,
     })
 
-    expect(gym).toHaveLength(1)
-    expect(gym).toEqual([expect.objectContaining({ title: 'JavaScript Gym' })
+    expect(gyms).toHaveLength(1)
+    expect(gyms).toEqual([expect.objectContaining({ title: 'JavaScript Gym' })
 
     ])
   })
@@ -52,13 +51,13 @@ describe('Search Gyms Use Case', () => {
         })
     }
 
-    const { gym } = await sut.execute({
+    const { gyms } = await sut.execute({
         query: 'JavaScript',
         page: 2
     })
 
-    expect(gym).toHaveLength(2)
-    expect(gym).toEqual([
+    expect(gyms).toHaveLength(2)
+    expect(gyms).toEqual([
       expect.objectContaining({ title: 'JavaScript Gym 21' }),
       expect.objectContaining({ title: 'JavaScript Gym 22' })
     ])

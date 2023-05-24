@@ -9,7 +9,7 @@ GyamPass style app;
 - [x] Deve ser possivel obter o perfil de um usuário logado;
 - [x] Deve ser possivel obter o número de check-ins realizados pelo usuário logado;
 - [x] Deve ser possivel o usuário obter seu histórico de check-ins;
-- [ ] Deve ser possivel o usuário buscar academias próximas;
+- [x] Deve ser possivel o usuário buscar academias próximas (até 10km);
 - [x] Deve ser possivel o usuário buscar academias pelo nome;
 - [x] Deve ser possivel o usuário realizar check-in em um academia;
 - [ ] Deve ser possivel validar o check-in de um usuário;
