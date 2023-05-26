@@ -1,11 +1,15 @@
 /* eslint-disable prettier/prettier */
-import { prisma } from '../../lib/prisma' // TODO FIX ME!!
-import { Prisma, User } from '@prisma/client'
+import { prisma } from '../../lib/prisma' // TODO Já existe uma pasta "Prisma", por isso não tem como usar o atalho.
+import { Prisma } from '@prisma/client'
 import { UsersRepository } from '../users-repo'
 
 export class PrismaUsersRepository implements UsersRepository {
- async findById(id: string): Promise<User | null> {
-    throw new Error('Method not implemented.')
+ async findById(id: string) {
+  const user = await prisma.user.findUnique({
+    where: { id },
+  })
+
+  return user
   }
 
   async findByEmail(email: string) {
