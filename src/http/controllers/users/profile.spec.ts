@@ -2,11 +2,15 @@
 import request from 'supertest'
 import { app } from '@/app'
 import { describe, it, expect, beforeAll, afterAll } from 'vitest'
+import { generateRandomDigits } from '@/utils/test/generators'
+
 
 describe('profile (e2e)', () => {
+    let randomDigits = '1234'
 
     beforeAll(async () => {
         await app.ready()
+        randomDigits = await generateRandomDigits(request)
     })
 
     afterAll(async () => {
@@ -18,27 +22,27 @@ describe('profile (e2e)', () => {
             .post('/users')
             .send({
                 name: 'John Doe',
-                email: 'johndoe@gmail.com',
-                password: '123456'
-            })
-        const authResponse = await request(app.server)
-            .post('/sessions')
-            .send({
-                email: "johndoe@gmail.com",
+                email: `${randomDigits}@example.com`,
                 password: '123456'
             })
 
-        const { token } = authResponse.body
+        const response = await request(app.server)
+            .post('/sessions')
+            .send({
+                email: `${randomDigits}@example.com`,
+                password: '123456',
+            })
 
         const profileResponse = await request(app.server)
             .get('/me')
-            .set('Authorization', `Bearer ${token}`)
+            .set('Authorization', `Bearer ${response.body.token}`)
             .send()
 
-        expect(profileResponse.statusCode).toEqual(200)
-        expect(profileResponse.body.user).toEqual(expect.objectContaining({
-            email: 'johndoe@gmail.com'
-        }))
-
+        expect(profileResponse.statusCode).toBe(200)
+        expect(profileResponse.body.user).toEqual(
+            expect.objectContaining({
+                email: `${randomDigits}@example.com`,
+            })
+        )
     })
 })

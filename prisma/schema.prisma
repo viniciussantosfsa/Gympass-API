@@ -3,8 +3,13 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  MEMBER
 }
 
 model User {
@@ -12,6 +17,7 @@ model User {
   name          String
   email         String   @unique
   password_hash String
+  role          Role     @default(MEMBER)
   create_at     DateTime @default(now())
 
   checkIns CheckIn[]

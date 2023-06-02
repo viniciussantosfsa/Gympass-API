@@ -8,12 +8,8 @@ export async function create(request: FastifyRequest, reply: FastifyReply): Prom
         title: z.string(),
         description: z.string().nullable(),
         phone: z.string().nullable(),
-        latitude: z.number().refine((value) => {
-            return Math.abs(value) <= 90
-        }),
-        longitude: z.number().refine((value) => {
-            return Math.abs(value) <= 180
-        })
+        latitude: z.number().refine((value) => { return Math.abs(value) <= 90 }),
+        longitude: z.number().refine((value) => { return Math.abs(value) <= 180 })
     })
 
     const { title, description, phone, latitude, longitude } =
