@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { prisma } from '../../lib/prisma' // TODO Já existe uma pasta "Prisma", por isso não tem como usar o atalho.
 import { Prisma } from '@prisma/client'
 import { UsersRepository } from '../users-repo'

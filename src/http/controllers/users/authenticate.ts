@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 import { InvalidCredentialsError } from '@/user-cases/errors/invalid-credentials-erros'

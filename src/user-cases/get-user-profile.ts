@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { UsersRepository } from '@/repositories/users-repo'
 import { User } from '@prisma/client'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'

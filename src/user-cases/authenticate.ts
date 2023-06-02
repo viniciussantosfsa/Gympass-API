@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { UsersRepository } from '@/repositories/users-repo'
 import { InvalidCredentialsError } from './errors/invalid-credentials-erros'
 import { compare } from 'bcryptjs'

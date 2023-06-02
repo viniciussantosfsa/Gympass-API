@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import supertest from 'supertest'
 
 export async function generateRandomDigits(

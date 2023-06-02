@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyInstance } from 'fastify'
 import request from 'supertest'
 import { generateRandomDigits } from './generators'

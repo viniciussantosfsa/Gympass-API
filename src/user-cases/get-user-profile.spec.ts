@@ -1,12 +1,9 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-irregular-whitespace */
 import { it, describe, expect, beforeEach } from 'vitest'
 import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-users-repo'
 import { hash } from 'bcryptjs'
 import { GetUserProfileUseCase } from './get-user-profile'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
 
-// * The idea of ​this design pattern is to reuse part of the code, but it is "zeroed"
 let usersRepository: InMemoryUsersRepository
 let sut: GetUserProfileUseCase
 

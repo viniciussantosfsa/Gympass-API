@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Gym, Prisma } from '@prisma/client'
 import { GymsRepository, findManyNearbyByParams } from '../gyms-repo'
 import { randomUUID } from 'node:crypto'

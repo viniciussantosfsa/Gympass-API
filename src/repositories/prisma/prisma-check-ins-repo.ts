@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { CheckIn, Prisma } from '@prisma/client'
 import { prisma } from '@/lib/prisma'
 import { CheckInsRepository } from '../check-ins-repo'

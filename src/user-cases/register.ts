@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { UsersRepository } from '@/repositories/users-repo'
 import { hash } from 'bcryptjs'
 import { UserAlreadyExistsError } from './errors/user-already-exists-error'

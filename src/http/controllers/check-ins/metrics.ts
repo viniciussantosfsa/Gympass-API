@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { makeGetUserMetricsUseCase } from '@/user-cases/factories/make-get-user-metrics-use-case'
 import { FastifyRequest, FastifyReply } from 'fastify'
 

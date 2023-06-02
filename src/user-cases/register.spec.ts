@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { it, describe, expect, beforeEach } from 'vitest'
 import { RegisterUseCase } from './register'
 import { compare } from 'bcryptjs'

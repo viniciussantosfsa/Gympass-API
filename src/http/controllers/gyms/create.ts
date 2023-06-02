@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 import { makeCreateGymUseCase } from '@/user-cases/factories/make-create-gyms-use-case'

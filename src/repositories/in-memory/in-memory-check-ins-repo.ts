@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Prisma, CheckIn } from '@prisma/client'
 import { CheckInsRepository } from '../check-ins-repo'
 import { randomUUID } from 'node:crypto'

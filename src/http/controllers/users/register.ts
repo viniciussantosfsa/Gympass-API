@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 import { UserAlreadyExistsError } from '@/user-cases/errors/user-already-exists-error'

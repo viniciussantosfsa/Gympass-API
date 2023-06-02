@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Prisma, User } from '@prisma/client'
 import { UsersRepository } from '../users-repo'
 

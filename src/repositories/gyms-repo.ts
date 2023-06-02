@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Gym, Prisma } from '@prisma/client'
 
 export interface findManyNearbyByParams {

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 import { makeValidateCheckInUseCase } from '@/user-cases/factories/make-validate-check-in-use-case'

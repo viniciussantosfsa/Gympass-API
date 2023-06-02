@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyInstance } from 'fastify'
 import { verifyJWT } from '@/http/middlewares/verify-jwt'
 import { search } from './search'

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 import { makeFetchUserCheckInsHistoryUseCase } from '@/user-cases/factories/make-fetch-user-check-ins-history-use-case'

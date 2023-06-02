@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { env } from '../env/index' // TODO FIX ME!
 import { PrismaClient } from '@prisma/client'
 

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { it, describe, expect, beforeEach, afterEach, vi } from 'vitest'
 import { InMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins-repo'
 import { CheckInUseCase } from './check-in'

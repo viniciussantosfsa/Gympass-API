@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export interface Coordinate {
   latitude: number
   longitude: number

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { it, describe, expect, beforeEach } from 'vitest'
 import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-repo'
 import { SearchGymsUseCase } from './search-gyms'

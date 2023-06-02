@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { CheckIn } from '@prisma/client'
 import { CheckInsRepository } from '@/repositories/check-ins-repo'
 import { GymsRepository } from '@/repositories/gyms-repo'
@@ -32,8 +31,6 @@ export class CheckInUseCase {
     if (!gym) {
       throw new ResourceNotFoundError()
     }
-
-    // calculate distance between user and gym(100m)
 
     const distance = getDistanceBetweenCoordinates(
       { latitude: userLatitude, 

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /* eslint-disable no-irregular-whitespace */
 import { it, describe, expect, beforeEach } from 'vitest'
 import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-users-repo'

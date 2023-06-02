@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 import { makeFetchNearbyGymsUseCase } from '@/user-cases/factories/make-fetch-nearby-gyms-use-case'
