@@ -20,25 +20,31 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
     })
 
     const token = await reply.jwtSign(
-      {}, {
-      sign: {
-        sub: user.id
-      }
-    })
+      {
+        role: user.id,
+      },
+      {
+        sign: {
+          sub: user.id,
+        }
+      })
 
     const refreshToken = await reply.jwtSign(
-      {}, {
-      sign: {
-        sub: user.id,
-        expiresIn: '7d',
-      }
-    })
+      {
+        role: user.id,
+      },
+      {
+        sign: {
+          sub: user.id,
+          expiresIn: '7d',
+        }
+      })
 
     return reply
       .setCookie('refreshToken', refreshToken, {
         path: '/', // Todas as rotas do backend podem acessar, somente.
-        secure: true, 
-        sameSite: true, 
+        secure: true,
+        sameSite: true,
         httpOnly: true,
       })
       .status(200)
